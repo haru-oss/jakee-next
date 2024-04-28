@@ -1,29 +1,26 @@
 import './App.css'
 import {useState} from 'react'
+import { ChildArea } from './ChildArea'
 
-export function App() {
+export const App=()=> {
 
-  const [count,setCount] = useState(0);
-  console.log(count);
+  const [text,setText] = useState("");
+const [open,setOpen] = useState(false);
 
+const onClickOpen = ()=>{
+    setOpen(!open);
 
+  };
 
-    const onClickCountup = ()=>{
-      setCount(count+1)
-      console.log(count)
-    }
-    const onClickCountdown = ()=>{
-      setCount(count-1)
-      console.log(count)
-    }
-
-
+const onChangeText = (e)=> setText(e.target.value)
 
      return (
       <div>
-        <p>{count}</p>
-        <button onClick={onClickCountup}>+</button>
-        <button onClick={onClickCountdown}>-</button>
+        <input value={text} onChange={onChangeText} />
+        <br />
+        <br />
+        <button onClick={onClickOpen}>表示</button>
+        <ChildArea open = {open}/>
       </div>
      )
 
