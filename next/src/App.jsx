@@ -10,8 +10,12 @@ import { Page2 } from './Page2';
 
 export const App=()=> {
      return (
+
+
+
        <BrowserRouter>
           <div>
+            {/* Linkは、aタグのような機能を持つ */}
             <Link to="/">Home</Link>
             <br />
             <Link to="page1">Page1</Link>
@@ -23,23 +27,17 @@ export const App=()=> {
             <Route path="/" element={<Home />} />
             <Route path="page1" element={<Page1 />} />
             <Route path="page2" element={<Page2 />} />
-
-
-            {/* <Route path='/'> */}
-{/*
-            </Route>
-            <Route path='/page1'>
-              <Page1/>
-            </Route>
-            <Route path='/page2'>
-              <Page2/>
-     </Route> */}
           </Routes>
-
+          {/* <Routes>で囲った要素たちは、「このパスの時は、このコンポーネントを表示する と言った意味の記述をすることができる。」*/}
 
 
 
       </BrowserRouter>
+// ルーティングの設定
+// 最初に、BrowserRouterというタグで全体を囲う
+
+
+
 
      )
 
