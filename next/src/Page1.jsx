@@ -1,23 +1,21 @@
-import {Link} from "react-router-dom"
-import { Page1DetailA } from "./Page1DetailA";
-import {Page1DetailB}  from "./Page1DetailB"
+import {Link,Outlet} from "react-router-dom"
 
 export const Page1 = () => {
     return(
 
-        // <BrowserRouter>
+
           <div>
               <h1>Page1</h1>
-              <Link to = "/page1/detailA">DetaileA</Link>
+              <Link to={"DetailA"}>Page1DetailA</Link>
               <br />
-              <Link to = "/page1/detailB">DetaileB</Link>
+              <br />
+              <Link to={"DetailB"}>Page1DetailB</Link>
+              {/* <Outlet/> */}
           </div>
 
-        //   <Routes>
-        //       <Route path="/page1/detailA" element={<Page1DetailA />} />
-        //       <Route path="/page1/detailB" element={<Page1DetailB />} />
-        //   </Routes>
 
-        /* </BrowserRouter> */
+
     )
+
+
 };
