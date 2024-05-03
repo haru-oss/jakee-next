@@ -6,16 +6,16 @@ export const Page1 = () => {
 
           <div>
               <h1>Page1</h1>
-              <Link to={"DetailA"}>Page1DetailA</Link>
+              <Link to={"detailA"}>Page1DetailA</Link>
               <br />
               <br />
-              <Link to={"DetailB"}>Page1DetailB</Link>
-              {/* <Outlet/> */}
+              <Link to={"detailB"}>Page1DetailB</Link>
+              <Outlet/>
           </div>
 
 
 
-    )
+)
 
 
 };
