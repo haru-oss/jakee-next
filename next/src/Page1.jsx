@@ -1,4 +1,4 @@
-import {Link,Outlet} from "react-router-dom"
+import {Link} from "react-router-dom"
 
 export const Page1 = () => {
     return(
@@ -10,7 +10,7 @@ export const Page1 = () => {
               <br />
               <br />
               <Link to={"detailB"}>Page1DetailB</Link>
-              <Outlet/>
+              {/* <Outlet/> */}
           </div>
 
 
