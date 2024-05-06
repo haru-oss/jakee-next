@@ -1,4 +1,6 @@
 import './App.css'
+import { SecondaryButton } from './components/atom/SecondaryButton'
+import { PrimaryButton } from './components/atom/button/PrimaryButton'
 
 
 
@@ -8,6 +10,9 @@ import './App.css'
 export const App=()=> {
      return (
       <>
+
+      <PrimaryButton >テスト</PrimaryButton>
+      <SecondaryButton>検索</SecondaryButton>
       </>
      )
 
