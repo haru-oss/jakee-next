@@ -1,6 +1,8 @@
 import './App.css'
-import { SecondaryButton } from './components/atom/SecondaryButton'
+import { SecondaryButton } from './components/atom/button/SecondaryButton'
 import { PrimaryButton } from './components/atom/button/PrimaryButton'
+import { SearchInput } from './components/molecules/SearchInput'
+import { UserCrad } from './components/organisms/user/UserCrad'
 
 
 
@@ -13,7 +15,13 @@ export const App=()=> {
 
       <PrimaryButton >テスト</PrimaryButton>
       <SecondaryButton>検索</SecondaryButton>
+      <br />
+
+      <SearchInput/>
+      <UserCrad/>
+
       </>
+
      )
 
 
