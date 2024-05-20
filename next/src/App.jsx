@@ -1,26 +1,28 @@
 import './App.css'
-import { SecondaryButton } from './components/atom/button/SecondaryButton'
-import { PrimaryButton } from './components/atom/button/PrimaryButton'
-import { SearchInput } from './components/molecules/SearchInput'
-import { UserCrad } from './components/organisms/user/UserCrad'
+import {  Kouter } from "./router/ Kouter"
+import { UserProvider } from './providers/userProvider'
 
 
+// const user = {
+//   name: "ハル",
+//   image: "https://source.unsplash.com/Tk9Kz4wGZ1I",
+//   email: "haruru@gmail.com",
+//     TEL: "088047477773",
+// company: {
+//   name:"テスト株式会社",
+//   website:"httpfgjgj@gamail.com",
+// },
+// }
 
-// import {useState,useCallback} from 'react'
 
 
 export const App=()=> {
      return (
-      <>
+     <UserProvider>
+     <Kouter/>
+     </UserProvider>
 
-      <PrimaryButton >テスト</PrimaryButton>
-      <SecondaryButton>検索</SecondaryButton>
-      <br />
 
-      <SearchInput/>
-      <UserCrad/>
-
-      </>
 
      )
 

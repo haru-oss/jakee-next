@@ -1,23 +1,33 @@
 import styled from "styled-components"
+import { Card } from "../../atom/card/Card";
+import { UserIconWithName } from "../../molecules/user/UserIconWithName";
 
-export const UserCrad = () => {
+export const UserCrad = (props) => {
+    const {user} = props;
+
     return(
-<div>
 
-    <img height ={160} width={160} src = "https://source.unsplash.com/Tk9Kz4wGZ1I" alt="プロフィール" />
-    <p>名前</p>
+
+<Card>
+
+    <UserIconWithName image = {user.image} name = {user.name} />
+
     <SDl>
         <dt>メール</dt>
-        <dd>haruru@gmail.com</dd>
+        <dd>{user.email}</dd>
 
         <dt>TEL</dt>
-        <dd>088047477773</dd>
+        <dd>{user.TEL}</dd>
         <dt>会社名</dt>
-        <dd>o-kuranddddファクトリー</dd>
+        <dd>{user.company.name}</dd>
         <dt>WEB</dt>
-        <dd>httpfgjgjgfkgj</dd>
+        <dd>{user.website}</dd>
     </SDl>
-</div>
+
+
+</Card>
+
+
     )
 };
 
@@ -32,6 +42,7 @@ dt {
 dd{
     padding-left:  32px;
     padding-bottom: 8px
+    overfloe-wrap: break-word;
 }
 
 
